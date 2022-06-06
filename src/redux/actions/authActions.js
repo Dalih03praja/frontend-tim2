@@ -127,7 +127,7 @@ export const loginWithGoogle = (accessToken) => async (dispatch) => {
         });
         const result = await response.json();
 
-        const userInfo = await fetch(`${PROCESS.ENV.REACT_ME}`, {
+        const userInfo = await fetch(`${process.env.REACT_ME}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -173,7 +173,7 @@ export const loginWithGoogle = (accessToken) => async (dispatch) => {
 
 export const cekTokenExp = () => async (dispatch) => {
     try {
-        const response = await fetch(`${PROCESS.ENV.REACT_ME}`, {
+        const response = await fetch(`${process.env.REACT_ME}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
