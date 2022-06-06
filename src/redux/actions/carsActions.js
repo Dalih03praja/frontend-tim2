@@ -5,7 +5,7 @@ require("dotenv").config();
 export const getAllCars = (params) => async (dispatch) => {
     try {
         const {tanggal, jam, penumpang} = params;
-        const response = await fetch(`http://localhost:8000/api/v1/cars/:${tanggal}/:${jam}/${penumpang}`);
+        const response = await fetch(`${process.env.REACT_ALL_CARS}/:${tanggal}/:${jam}/${penumpang}`);
         const data = await response.json();
 
         dispatch({
