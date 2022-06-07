@@ -1,6 +1,5 @@
 import Swal from "sweetalert2";
 import {AUTH_ERROR, LOGIN, LOGOUT, REGISTER} from "./types";
-require("dotenv").config();
 
 export const loginViaForm = (data) => async (dispatch) => {
     try {

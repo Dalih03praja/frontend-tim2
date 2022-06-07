@@ -1,6 +1,5 @@
 import Swal from "sweetalert2";
 import {GET_ALL_CARS, CARS_ERROR} from "./types";
-require("dotenv").config();
 
 export const getAllCars = (params) => async (dispatch) => {
     try {
